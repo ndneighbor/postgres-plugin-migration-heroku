@@ -137,7 +137,8 @@ remove_timescale_commands() {
 
 # Get list of databases, excluding system databases
 databases=$(psql -d "$PLUGIN_URL" -t -A -c "SELECT datname FROM pg_database WHERE datistemplate = false;")
-write_info "Found databases to migrate: $databases"
+array=("${databases[@]:0}")
+write_info "Found databases to migrate: $array"
 
 dump_dir="plugin_dump"
 mkdir -p $dump_dir
