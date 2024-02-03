@@ -42,7 +42,7 @@ trap 'echo "An error occurred. Exiting..."; exit 1;' ERR
 printf "${_BOLD}${_MAGENTA}"
 echo "+-------------------------------------+"
 echo "|                                     |"
-echo "|  Railway Postgres Migration Script  |"
+echo "|  MOdifed Postgres Migration Script  |"
 echo "|                                     |"
 echo "+-------------------------------------+"
 printf "${_RESET}\n"
