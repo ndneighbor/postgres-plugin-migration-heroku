@@ -116,7 +116,7 @@ dump_database() {
       --no-owner \
       --no-privileges \
       --disable-triggers \
-      --file=$dump_file || error_exit "Failed to dump database from $database."
+      --file="d30il791oqm91o" || error_exit "Failed to dump database from $database."
 
   write_ok "Successfully saved dump to $dump_file"
 
