@@ -142,7 +142,9 @@ write_info "Found databases to migrate: $databases"
 dump_dir="plugin_dump"
 mkdir -p $dump_dir
 
-for db in $databases; do
+array=("${databases[@]:0}")
+
+for db in $array; do
   dump_database "$db"
 done
 
