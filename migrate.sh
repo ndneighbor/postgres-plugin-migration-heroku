@@ -100,7 +100,7 @@ mkdir -p $dump_dir
 
 dump_database() {
   local database=$1
-  local dump_file="$dump_dir/$database.sql"
+  local dump_file="$dump_dir/d30il791oqm91o.sql"
 
   section "Dumping database: $database"
 
