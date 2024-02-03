@@ -138,12 +138,12 @@ remove_timescale_commands() {
 # Get list of databases, excluding system databases
 databases=$(psql -d "$PLUGIN_URL" -t -A -c "SELECT datname FROM pg_database WHERE datistemplate = false;")
 array=("${databases[@]:0}")
-write_info "Found database to migrate: ${databases[@]:1}"
+write_info "Found database to migrate: ${databases[1]}"
 
 dump_dir="plugin_dump"
 mkdir -p $dump_dir
 
-dump_database "${databases[@]:1}"
+dump_database "${databases[1]}"
 
 trap - ERR # Temporary disable error trap to avoid exiting on error
 psql "$NEW_URL" -c '\dx' | grep -q 'timescaledb'
