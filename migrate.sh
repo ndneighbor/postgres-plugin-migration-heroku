@@ -105,7 +105,7 @@ dump_database() {
   section "Dumping database: $database"
 
   local base_url=$(echo $PLUGIN_URL | sed -E 's/(postgresql:\/\/[^:]+:[^@]+@[^:]+:[0-9]+)\/.*/\1/')
-  local db_url="${base_url}/${database}"
+  local db_url="${base_url}"
 
   echo "Dumping database from $db_url"
 
